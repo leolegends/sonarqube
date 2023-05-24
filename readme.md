@@ -24,4 +24,9 @@
 11.  Para parar e remover os contêineres, execute o comando `docker-compose down` no mesmo diretório onde você executou o comando "docker-compose up".
     
 
-Lembre-se de adaptar o exemplo de arquivo Docker Compose de acordo com suas necessidades, como definir senhas e outros parâmetros de configuração. Além disso, certifique-se de ter as dependências corretas instaladas no servidor, como o Docker e o Docker Compose, antes de iniciar o processo de implantação.
+12.  E por ultimo, para testar seu repositorio:
+
+`docker run --rm -e SONAR_HOST_URL="https://seuip:9000" -e SONAR_TOKEN=1234 -v "$(pwd):/usr/src" sonarsource/sonar-scanner-cli`
+
+
+Lembre-se de adaptar o exemplo de arquivo Docker Compose e sonar-project de acordo com suas necessidades, como definir senhas e outros parâmetros de configuração. Além disso, certifique-se de ter as dependências corretas instaladas no servidor, como o Docker e o Docker Compose, antes de iniciar o processo de implantação.
